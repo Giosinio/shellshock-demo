@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "61a2a41a-8823-4836-b184-e07177738130",
+		"name": "PSC Attacker Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20832654"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/attacker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"attacker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get vulnerable servers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/attacker/vulnerable-servers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"attacker",
+						"vulnerable-servers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get command outputs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/command-outputs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"command-outputs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get command outputs for server address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/command-outputs/:serverAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"command-outputs",
+						":serverAddress"
+					],
+					"variable": [
+						{
+							"key": "serverAddress",
+							"value": "127.0.0.1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
